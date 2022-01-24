@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hiraku.js</title>
+
+    <link rel="stylesheet" type="text/css" href="css/hiraku.css">
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/hiraku.js"></script>
+
+
+    <style>
+        #header {
+            background: #666;
+            height: 62px;
+            position: fixed;
+            width: 100%;
+            padding: 8px;
+        }
+        .hiraku-open-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <button class="hiraku-open-btn" id="offcanvas-btn-left" data-toggle-offcanvas="#js-hiraku-offcanvas-1">
+            <span class="hiraku-open-btn-line"></span>
+        </button>
+    </header>
+    <div class="offcanvas-left">
+        <ul><li>hogehoge</li></ul>
+    </div>
+
+    <script>
+    $(".offcanvas-left").hiraku({
+        btn:"#offcanvas-btn-left",
+        direction:"left"
+    });
+    </script>
+</body>
+</html>
